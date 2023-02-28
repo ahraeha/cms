@@ -1,5 +1,6 @@
 package com.zerobase.cms.exception;
 
+import javax.servlet.ServletException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
