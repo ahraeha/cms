@@ -23,9 +23,8 @@ import org.hibernate.envers.AuditOverride;
 @AllArgsConstructor
 @NoArgsConstructor
 @AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity{
+public class Seller extends BaseEntity{
   @Id
-  @Column(name = "id", nullable = false)
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
@@ -40,11 +39,8 @@ public class Customer extends BaseEntity{
   private String verificationCode;
   private boolean verify;
 
-  @Column(columnDefinition = "int default 0")
-  private Integer balance;
-
-  public static Customer from(SignUpForm form){
-    return Customer.builder()
+  public static Seller from(SignUpForm form){
+    return Seller.builder()
         .email(form.getEmail().toLowerCase(Locale.ROOT))
         .password(form.getPassword())
         .name(form.getName())
@@ -53,4 +49,5 @@ public class Customer extends BaseEntity{
         .verify(false)
         .build();
   }
+
 }
