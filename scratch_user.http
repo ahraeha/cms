@@ -1,0 +1,63 @@
+### 회원가입 ( 고객 )
+POST http://localhost:8080/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1991-08-16",
+  "email": "ahraeha@naver.com",
+  "name": "myName",
+  "password": "pw",
+  "phone": "01000000000"
+}
+### 이메일 인증 ( 고객 )
+GET http://localhost:8080/signup/customer/verify?email=ahraeha@naver.com&code=PBwpuKR51G
+
+### 로그인 ( 고객 )
+POST http://localhost:8080/signin/customer
+Content-Type: application/json
+
+{
+  "email": "ahraeha@naver.com",
+  "password": "pw"
+}
+
+### 회원 정보 조회 ( 고객 )
+GET http://localhost:8080/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzc2NjEyNzAsImV4cCI6MTY3Nzc0NzY3MH0.PVdCc_uOOXybFDOoTbjqlUZHNEZmIHEadby4DGEArpM
+
+### 잔액 변경 ( 고객 )
+POST http://localhost:8080/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzc2NjEyNzAsImV4cCI6MTY3Nzc0NzY3MH0.PVdCc_uOOXybFDOoTbjqlUZHNEZmIHEadby4DGEArpM
+
+{
+  "from": "server",
+  "message": "돈충전",
+  "money": 50000
+}
+
+###########################
+
+### 회원가입 ( 셀러 )
+POST http://localhost:8080/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1991-08-16",
+  "email": "ahraeha@naver.com",
+  "name": "myName",
+  "password": "pw",
+  "phone": "01000000000"
+}
+### 이메일 인증 ( 셀러 )
+GET http://localhost:8080/signup/seller/verify?email=ahraeha@naver.com&code=XJ4eHSTdXy
+
+### 로그인 ( 셀러 )
+POST http://localhost:8080/signin/seller
+Content-Type: application/json
+
+{
+  "email": "ahraeha@naver.com",
+  "password": "pw"
+}
