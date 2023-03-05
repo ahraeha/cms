@@ -51,7 +51,7 @@ Content-Type: application/json
   "phone": "01000000000"
 }
 ### 이메일 인증 ( 셀러 )
-GET http://localhost:8080/signup/seller/verify?email=ahraeha@naver.com&code=XJ4eHSTdXy
+GET http://localhost:8080/signup/seller/verify?email=ahraeha@naver.com&code=ADu5yvSAu9
 
 ### 로그인 ( 셀러 )
 POST http://localhost:8080/signin/seller
