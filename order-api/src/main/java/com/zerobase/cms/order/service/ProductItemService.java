@@ -4,6 +4,7 @@ import com.zerobase.cms.order.domain.model.Product;
 import com.zerobase.cms.order.domain.model.ProductItem;
 import com.zerobase.cms.order.domain.product.AddProductItemForm;
 import com.zerobase.cms.order.domain.product.UpdateProductItemForm;
+import com.zerobase.cms.order.domain.redis.Cart;
 import com.zerobase.cms.order.domain.repository.ProductItemRepository;
 import com.zerobase.cms.order.domain.repository.ProductRepository;
 import com.zerobase.cms.order.exception.CustomException;
@@ -18,6 +19,11 @@ public class ProductItemService {
 
   private final ProductRepository productRepository;
   private final ProductItemRepository productItemRepository;
+
+  @Transactional
+  public ProductItem getProductItem(Long id) {
+    return productItemRepository.getById(id);
+  }
 
   @Transactional
   public Product addProductItem(Long sellerId, AddProductItemForm form) {
@@ -49,7 +55,8 @@ public class ProductItemService {
   @Transactional
   public void deleteProductItem(Long sellerId, Long productItemId) {
     ProductItem productItem = productItemRepository.findById(productItemId)
-        .filter(pi ->pi.getSellerId().equals(sellerId)).orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_ITEM));
+        .filter(pi -> pi.getSellerId().equals(sellerId))
+        .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_ITEM));
     productItemRepository.delete(productItem);
   }
 }

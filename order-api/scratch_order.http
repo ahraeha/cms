@@ -1,27 +1,27 @@
 ### 상품추가 ( 셀러 )
 POST http://localhost:8081/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDEyNTcyLCJleHAiOjE2NzgwOTg5NzJ9.ChJbtgUvag6l0lo1HmZcEqpoUel72KcXgLUsMGCHEqs
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MTA2MDUwLCJleHAiOjE2NzgxOTI0NTB9.l-Mgila-_yLuD9vbeWBA-khQD65HAjVV71At3vLcSZw
 
 {
   "description": "상품 설명",
   "items": [
     {
-      "count": 1,
+      "count": 3,
       "name": "270",
       "price": 100000
     }
   ],
-  "name": "나이키 에어포스"
+  "name": "나이키 에어포스 2"
 }
 
 ### 상품 아이템 추가 ( 셀러 )
 POST http://localhost:8081/seller/product/item
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDEyNTcyLCJleHAiOjE2NzgwOTg5NzJ9.ChJbtgUvag6l0lo1HmZcEqpoUel72KcXgLUsMGCHEqs
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MTA2MDUwLCJleHAiOjE2NzgxOTI0NTB9.l-Mgila-_yLuD9vbeWBA-khQD65HAjVV71At3vLcSZw
 
 {
-      "productId": 4,
+      "productId": 1,
       "count": 1,
       "name": "280",
       "price": 100000
@@ -36,14 +36,14 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXU
   "description": "상품 설명",
   "items": [
     {
-      "id": 1,
-      "count": 1,
+      "id": 2,
+      "count": 5,
       "name": "280",
       "price": 100000
     }
   ],
   "id": 1,
-  "name": "나이키 에어포스 한정판"
+  "name": "나이키 에어포스 2"
 }
 
 ### 상품 아이템 수정 ( 셀러 )
@@ -88,14 +88,14 @@ GET http://localhost:8081/search/product?name=나이키
 Content-Type: application/json
 
 ### 상품 디테일 검색
-GET http://localhost:8081/search/product/detail?productId=3
+GET http://localhost:8081/search/product/detail?productId=1
 Content-Type: application/json
 
 
 ### 카트 추가
 POST http://localhost:8081/customer/cart
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDEyNTcyLCJleHAiOjE2NzgwOTg5NzJ9.ChJbtgUvag6l0lo1HmZcEqpoUel72KcXgLUsMGCHEqs
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXUWl2K0grak9RUG5hZG1LREJRPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzgxMDU5NzYsImV4cCI6MTY3ODE5MjM3Nn0.wgyoPiiUhBECccvW5SB81W8jnWuqfFm5pdJAnec4Pxk
 
 {
   "description": "상품 설명",
@@ -108,6 +108,6 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2kzbms4MWhuMnN4TDdKaUIyNTQzRzRXU
       "price": 100000
     }
   ],
-  "name": "string",
+  "name": "나이키 에어포스 2",
   "sellerId": 1
 }
