@@ -10,7 +10,7 @@ Content-Type: application/json
   "phone": "01000000000"
 }
 ### 이메일 인증 ( 고객 )
-GET http://localhost:8080/signup/customer/verify?email=ahraeha@naver.com&code=PBwpuKR51G
+GET http://localhost:8080/signup/customer/verify?email=ahraeha@naver.com&code=eFZ787HGsw
 
 ### 로그인 ( 고객 )
 POST http://localhost:8080/signin/customer

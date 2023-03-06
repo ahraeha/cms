@@ -48,7 +48,7 @@ public class CartService {
           .collect(Collectors.toMap(Cart.ProductItem::getId, it -> it));
 
       if (!redisProduct.getName().equals(form.getName())) {
-        cart.addMessage(redisProduct.getName() + "의 정보가 변경되었습니다. 확인 부탁들비니다.");
+        cart.addMessage(redisProduct.getName() + "의 정보가 변경되었습니다. 확인 부탁드립니다.");
       }
 
       for (Cart.ProductItem item : items) {
@@ -59,7 +59,7 @@ public class CartService {
           //happy case
         } else {
           if (redisItem.getPrice().equals(item.getPrice())) {
-            cart.addMessage(redisProduct.getName() + item.getName() + "의 정보가 변경되었습니다. 확인 부탁들비니다.");
+            cart.addMessage(redisProduct.getName() + item.getName() + "의 정보가 변경되었습니다. 확인 부탁드립니다.");
           }
           redisItem.setCount(redisItem.getCount() + item.getCount());
         }
